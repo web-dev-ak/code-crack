@@ -1,0 +1,293 @@
+[data-theme="light"] {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+    --color-bg: #000000;
+    --color-fg: #ffffff;
+}
+
+@font-face {
+    font-family: 'terminal-grotesque';
+    src: url(../resources/fonts/terminal-grotesque.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'terminal-grotesque', sans-serif;
+    font-weight: 400;
+    color: var(--color-fg);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.body {
+    padding: 40px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.body-main {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-fg);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+}
+
+/* Top Navigation */
+.header-box {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Top Navigation -> MUSIC PLAYER */
+.music-player-box {
+    width: 300px;
+    height: inherit;
+    border: 2px solid var(--color-fg);
+    display: flex;
+    align-items: center;
+}
+
+/* Add keyframes for rotating the music disk icon */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add the spin class for the disk icon animation */
+.spin {
+    animation: spin 15s linear infinite;  /* Spins every 2 seconds */
+}
+
+.music-player-disk-icon {
+    padding: 15px;
+}
+
+.music-player-disk-icon #disk-icon {
+    fill: var(--color-fg);
+}
+
+.music-player-details-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.music-player-box-title {
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+}
+
+.music-player-box-title span {
+    font-size: 24px;
+}
+
+.music-player-box-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.music-player-box-controls svg {
+    fill: var(--color-fg);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.music-player-box-controls #btn-previous {
+    transform: rotate(180deg);
+}
+
+.music-player-box-controls #btn-play {
+    display: block;
+}
+
+.music-player-box-controls #btn-pause {
+    display: none;
+}
+
+/* Top Navigation -> RIGHT NAVIGATION CONTROLS */
+.header-box-right-content {
+    display: flex;
+    gap: 20px;
+}
+
+.header-box-right-content svg {
+    fill: var(--color-fg);
+}
+
+.music-player-mute-btn {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--color-fg);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.music-player-mute-btn:hover {
+    background-color: var(--color-fg);
+}
+
+.music-player-mute-btn:hover svg {
+    fill: var(--color-bg);
+}
+
+.music-player-mute-btn #unmuted-icon {
+    display: block;
+}
+
+.music-player-mute-btn #muted-icon {
+    display: none;
+}
+
+.theme-mode-switch-btn {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--color-fg);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.theme-mode-switch-btn:hover {
+    background-color: var(--color-fg);
+}
+
+.theme-mode-switch-btn:hover svg {
+    fill: var(--color-bg);
+}
+
+.theme-mode-switch-btn #light-mode-icon {
+    display: block;
+}
+
+.theme-mode-switch-btn #dark-mode-icon {
+    display: none;
+}
+
+/* Page Content */
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-h1 {
+    font-family: "Pixelify Sans", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 128px;
+}
+
+#title-h2 {
+    font-size: 48px;
+}
+
+.button-box {
+    padding-top: 128px;
+}
+
+#start-button {
+    width: 286px;
+    height: 96px;
+    font-size: 40px;
+    color: var(--color-bg);
+    background: var(--color-fg);
+    border: none;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    color: var(--color-fg);
+    background: transparent;
+    border: 2px solid var(--color-fg);
+}
+
+/* RESPONSIVENESS -> TABLET */
+@media (width < 892px) {
+    #title-h1 {
+        font-size: 96px;
+    }
+    
+    #title-h2 {
+        font-size: 40px;
+    }
+    
+    .button-box {
+        padding-top: 96px;
+    }
+    
+    #start-button {
+        font-size: 36px;
+    }
+}
+
+/* RESPONSIVENESS -> MOBILE */
+@media (width < 481px) {
+    .music-player-box {
+        width: 221px;
+    }
+
+    .body {
+        padding: 20px;
+    }
+
+    .body-main {
+        padding: 10px;
+    }
+
+    .header-box-right-content {
+        gap: 8px;
+    }
+
+    #title-h1 {
+        text-align: center;
+        font-size: 88px;
+    }
+    
+    #title-h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .button-box {
+        padding-top: 96px;
+    }
+    
+    #start-button {
+        font-size: 36px;
+        width: 266px;
+        height: 92px;
+    }
+}
