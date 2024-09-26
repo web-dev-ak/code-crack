@@ -1,0 +1,83 @@
+/* RESPONSIVENESS -> TABLET */
+@media (width < 892px) {
+    #title-h1 {
+        text-align: center;
+        font-size: 96px;
+    }
+    
+    #title-h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .button-box {
+        padding-top: 96px;
+    }
+    
+    #start-button {
+        font-size: 36px;
+    }
+}
+
+@media (width < 626px) {
+    .body {
+        padding: 20px;
+    }
+
+    #landing-page{
+        padding: 10px;
+    }
+
+    #title-h1 {
+        font-size: 88px;
+    }
+    
+    #title-h2 {
+        font-size: 40px;
+    }
+}
+
+@media (width < 566px) {
+    .music-player-box {
+        width: 221px;
+    }
+
+    .header-box-right-content {
+        gap: 8px;
+    }
+}
+
+@media (width < 461px) {
+    .music-player-box{
+        width: 202.7px;
+        height: 73.15px;;
+    }
+
+    .header-box-right-content{
+        
+    }
+
+    .music-player-mute-btn{
+        width: 73.15px;
+        height: 73.15px;
+    }
+
+    .theme-mode-switch-btn{
+        width: 73.15px;
+        height: 73.15px;
+    }
+}
+
+/* RESPONSIVENESS -> MOBILE(480) */
+@media (width < 481px) {
+    
+    .button-box {
+        padding-top: 96px;
+    }
+    
+    #start-button {
+        font-size: 36px;
+        width: 266px;
+        height: 92px;
+    }
+}

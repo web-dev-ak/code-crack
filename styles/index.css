@@ -42,6 +42,11 @@ body {
     width: 100%;
     height: 100%;
     border: 2px solid var(--color-fg);
+}
+
+#landing-page{
+    width: 100%;
+    height: 100%;
     padding: 20px;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -232,62 +237,4 @@ body {
     color: var(--color-fg);
     background: transparent;
     border: 2px solid var(--color-fg);
-}
-
-/* RESPONSIVENESS -> TABLET */
-@media (width < 892px) {
-    #title-h1 {
-        font-size: 96px;
-    }
-    
-    #title-h2 {
-        font-size: 40px;
-    }
-    
-    .button-box {
-        padding-top: 96px;
-    }
-    
-    #start-button {
-        font-size: 36px;
-    }
-}
-
-/* RESPONSIVENESS -> MOBILE */
-@media (width < 481px) {
-    .music-player-box {
-        width: 221px;
-    }
-
-    .body {
-        padding: 20px;
-    }
-
-    .body-main {
-        padding: 10px;
-    }
-
-    .header-box-right-content {
-        gap: 8px;
-    }
-
-    #title-h1 {
-        text-align: center;
-        font-size: 88px;
-    }
-    
-    #title-h2 {
-        text-align: center;
-        font-size: 40px;
-    }
-    
-    .button-box {
-        padding-top: 96px;
-    }
-    
-    #start-button {
-        font-size: 36px;
-        width: 266px;
-        height: 92px;
-    }
 }
